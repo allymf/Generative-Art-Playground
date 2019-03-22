@@ -79,9 +79,9 @@ extension CanvasSKScene: CanvasDelegate {
         
         switch type {
         case .circle:
-            shape = SKShapeNode(circleOfRadius: self.shapesize/2)
+            shape = SKShapeNode(circleOfRadius: self.fontSize)
         case .square:
-            shape = SKShapeNode(rectOf: CGSize(width: self.shapesize, height: self.shapesize))
+            shape = SKShapeNode(rectOf: CGSize(width: self.fontSize, height: self.shapesize))
             
             
         }
@@ -91,7 +91,7 @@ extension CanvasSKScene: CanvasDelegate {
         shape.position = CGPoint(x: self.x, y: self.y)
         
         self.addChild(shape)
-        self.nodes.append(shape)
+        //self.nodes.append(shape)
         updateCoordinates()
     }
     
@@ -102,11 +102,6 @@ extension CanvasSKScene: CanvasDelegate {
             return
         }
         
-        //        if self.x > self.frame.width {
-        //            self.x = fontSize
-        //            return
-        //        }
-        
         let label = SKLabelNode(fontNamed: self.fontName)
         label.text = text
         label.fontSize = self.fontSize
@@ -116,7 +111,7 @@ extension CanvasSKScene: CanvasDelegate {
         label.horizontalAlignmentMode = .center
         
         self.addChild(label)
-        self.nodes.append(label)
+        //self.nodes.append(label)
         
         print("\(label)")
         
@@ -127,13 +122,14 @@ extension CanvasSKScene: CanvasDelegate {
     
     func updateCoordinates() {
         //self.x += self.fontSize
-        let factor = CGFloat((self.fontSize*1.5)/20)
+        let factor = CGFloat((self.fontSize*1.5)/20.0)
         self.x += self.fontSize/factor
         
         if self.x > self.frame.width {
             //self.x = fontSize/1.5
             self.x = 0
-            self.y -= self.fontSize/1.2
+            let fy = CGFloat((self.fontSize*1.2)/20.0)
+            self.y -= self.fontSize/fy
             //self.y -= self.fontSize
             return
         }

@@ -44,7 +44,7 @@ class CanvasViewController: UIViewController, PlaygroundLiveViewSafeAreaContaine
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //self.view.topAnchor =
+        // Retrieving the widgets
         guard let content = (self.view.subviews.filter {$0.restorationIdentifier == "content"}).first else { fatalError("Carai Burracha") }
         self.contentView = content
         
@@ -55,6 +55,8 @@ class CanvasViewController: UIViewController, PlaygroundLiveViewSafeAreaContaine
         guard let bt = (self.contentView.subviews.filter {$0.restorationIdentifier == "btPickImage"}).first as? UIButton else { fatalError("Carai Burracha") }
         self.btPickImage = bt
         
+        
+        // Consider the safearea of liveview
         NSLayoutConstraint.activate([
             self.contentView.bottomAnchor.constraint(equalTo: liveViewSafeAreaGuide.bottomAnchor),
             self.contentView.topAnchor.constraint(equalTo: liveViewSafeAreaGuide.topAnchor)
@@ -62,11 +64,11 @@ class CanvasViewController: UIViewController, PlaygroundLiveViewSafeAreaContaine
         
         
         
-        
+        // Setting Tap Action to btPickImage
         self.btPickImage.addTarget(self, action: #selector(CanvasViewController.didTapPick(_:)), for: .touchUpInside)
         
-        //self.characters = Array(text)
         
+        // Configuring the scene and the skView
         scene = CanvasSKScene(size: spriteKitView.frame.size)
         scene.backgroundColor = .black
         
@@ -79,8 +81,7 @@ class CanvasViewController: UIViewController, PlaygroundLiveViewSafeAreaContaine
         
     }
     
-    func logPixelsOfImage(_ image : UIImage) {
-        // 1. Get pixels of image
+    func loadPixels(of image : UIImage) {
         let inputCGImage = image.cgImage!
         let width = inputCGImage.width
         let height = inputCGImage.height
@@ -100,62 +101,16 @@ class CanvasViewController: UIViewController, PlaygroundLiveViewSafeAreaContaine
         
         context?.draw(inputCGImage, in: CGRect(x: 0, y: 0, width: CGFloat(width),height: CGFloat(height)))
         
-        
-        // 2. Iterate and log!
-        print("Brightness of image:")
-        
-        
         self.imgPixels = pixels
         
     }
     
-    @objc
-    func didTapPick(_ sender: Any) {
-        
-        self.btPickImage.setTitle("tocou", for: .normal)
-        
-        self.timer.invalidate()
-        
-        let alert = UIAlertController(title: "Pick an image", message: "Select the source of the photo", preferredStyle: .actionSheet)
-        
-        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action) in
-            self.pickImageFrom(.camera)
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Library", style: .default, handler: { (action) in
-            self.pickImageFrom(.photoLibrary)
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Saved Photos", style: .default, handler: { (action) in
-            self.pickImageFrom(.savedPhotosAlbum)
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
-            alert.dismiss(animated: true, completion: nil)
-        }))
-        
-        if let popoverVC = alert.popoverPresentationController {
-            //            popoverVC.barButtonItem = sender as? UIBarButtonItem
-            popoverVC.sourceView = self.view
-            popoverVC.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
-            popoverVC.permittedArrowDirections = []
-            
-        }
-        
-        self.present(alert, animated: true, completion: nil)
-        
-    }
+    func setBackgroundColor(_ color: UIColor) {
+        self.view.backgroundColor = color
+        self.contentView.backgroundColor = color
+        self.spriteKitView.backgroundColor = color
+        self.scene.backgroundColor = color
     
-    func pickImageFrom(
-        _ sourceType: UIImagePickerController.SourceType){
-        
-        let myPickerController = UIImagePickerController()
-        myPickerController.delegate = self;
-        myPickerController.sourceType = sourceType
-        
-        self.present(myPickerController, animated: true, completion: nil)
-        
-        
     }
     
     func resetIteration(){
@@ -168,29 +123,28 @@ class CanvasViewController: UIViewController, PlaygroundLiveViewSafeAreaContaine
     @objc
     func updateTimer(){
         
-        if index > self.imgPixels.count - 1 {
+        if index >= self.imgPixels.count - 1 {
             print("Acabouu")
             timer.invalidate()
             return
         }
         
-        let chars = Array(self.cvSettings.text)
-        let letter = chars[textCount];
+        
         let color = UIColor(imgPixels[index])
         
         switch self.cvSettings.mode {
         case .text:
+            let chars = Array(self.cvSettings.text)
+            let letter = chars[textCount];
             delegate?.displayText("\(letter)", with: color)
+            textCount+=1
+            if (textCount >= chars.count) {
+                textCount = 0;
+            }
         case .shape:
             delegate?.displayShapeOf(self.cvSettings.shape, with: color)
         }
         
-        textCount+=1
-        if (textCount >= chars.count) {
-            textCount = 0;
-        }
-        
-        //        index += Int(self.diameter/1.5 + (self.diameter/1.2 * CGFloat(self.image!.cgImage!.width)))
         
         guard let imgWidth = self.image.cgImage?.width else {return}
         
@@ -250,8 +204,8 @@ extension CanvasViewController: PlaygroundLiveViewMessageHandler {
             //self.text = value
         case .data(let value):
             guard let newSettings = NSKeyedUnarchiver.unarchiveObject(with: value) as? CanvasSettings else {break}
+            newSettings.size += 9.0
             self.cvSettings = newSettings
-            self.btPickImage.setTitle("\(self.cvSettings.mode.rawValue)", for: .normal)
             delegate?.setupWith(fontName: self.cvSettings.font.rawValue, fontSize: CGFloat(self.cvSettings.size))
             resetIteration()
         default:
@@ -265,49 +219,53 @@ extension CanvasViewController: PlaygroundLiveViewMessageHandler {
 // MARK: ImagePickerDelegate
 extension CanvasViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        guard let image = info[.originalImage] as? UIImage else {return}
-        
+    func getNewSize(of image: UIImage) -> CGSize {
         
         var newSize = CGSize()
         let sceneSize: CGSize = self.scene.frame.size
         let imageSize: CGSize = CGSize(width: image.cgImage!.width, height: image.cgImage!.height)
-
-
+        
+        
         if sceneSize.width > sceneSize.height{
             var width: CGFloat = 0.0
             let height: CGFloat = sceneSize.height
-
+            
             //let ar = imageSize.height/imageSize.width
             let diff = height /  imageSize.height
-
+            
             //width = (height*imageSize.width)/imageSize.height
             //width = imageSize.width*height
             width = imageSize.width*diff
-
+            
             newSize = CGSize(width: width, height: height)
-
+            
         } else {
             let width: CGFloat = sceneSize.width
             var height: CGFloat = 0.0
-
+            
             //let ar = imageSize.width/imageSize.height
             let diff = width /  imageSize.width
             //height = (width*imageSize.height)/imageSize.width
             //height = width*ar
             height = imageSize.height * diff
-
+            
             newSize = CGSize(width: width, height: height)
         }
+        return newSize
+    }
+    
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        guard let image = info[.originalImage] as? UIImage else {return}
+        
+        
+        self.image = image.scaledToSize(getNewSize(of: image))!
 
-        self.image = image.scaledToSize(newSize)!
-
-        self.logPixelsOfImage(self.image)
+        self.loadPixels(of: self.image)
         resetIteration()
         delegate?.resetCanvas()
         
-        timer = Timer.scheduledTimer(timeInterval: self.cvSettings.step, target: self,   selector: (#selector(CanvasViewController.updateTimer)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self,   selector: (#selector(CanvasViewController.updateTimer)), userInfo: nil, repeats: true)
         
         picker.dismiss(animated: false, completion: nil)
     }
@@ -315,5 +273,54 @@ extension CanvasViewController: UIImagePickerControllerDelegate, UINavigationCon
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+    
+    @objc
+    func didTapPick(_ sender: Any) {
+        
+        
+        self.timer.invalidate()
+        
+        let alert = UIAlertController(title: "Pick an image", message: "Select the source of the photo", preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action) in
+            self.pickImageFrom(.camera)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Library", style: .default, handler: { (action) in
+            self.pickImageFrom(.photoLibrary)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Saved Photos", style: .default, handler: { (action) in
+            self.pickImageFrom(.savedPhotosAlbum)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        if let popoverVC = alert.popoverPresentationController {
+            //            popoverVC.barButtonItem = sender as? UIBarButtonItem
+            popoverVC.sourceView = self.view
+            popoverVC.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popoverVC.permittedArrowDirections = []
+            
+        }
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func pickImageFrom(
+        _ sourceType: UIImagePickerController.SourceType){
+        
+        let myPickerController = UIImagePickerController()
+        myPickerController.delegate = self;
+        myPickerController.sourceType = sourceType
+        
+        self.present(myPickerController, animated: true, completion: nil)
+        
+        
+    }
+    
     
 }

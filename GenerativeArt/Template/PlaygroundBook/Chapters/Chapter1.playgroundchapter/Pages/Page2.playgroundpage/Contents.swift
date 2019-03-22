@@ -6,50 +6,55 @@
 //  The Swift file containing the source code edited by the user of this playground book.
 //
 
+//#-code-completion(everything, hide)
+//#-code-completion(identifier, show, drawCircleWith(size:), drawSquareWith(size:))
+//#-code-completion(snippet, show, color, position)
+//#-end-hidden-code
+
+//#-hidden-code
 import PlaygroundSupport
 import Foundation
 import CoreGraphics
 
 // Initial Settings Values
-let mode: DrawMode = .shape
 private let fontType: Font = .chalck
-public var shapeSize: Double = 0.0
-private  var step: Double = 0.0
 let text: String = " "
 
-public let pixels = [Pixel(at: Position(x:0,y:0), with: Color(red: 45, green: 122, blue: 23))]
+public let pixels = [Pixel(at: 11, with: 19)]
 
 let liveView = PlaygroundPage.current.liveView as! PlaygroundRemoteLiveViewProxy
+public typealias Position = Int
+public typealias Color = Int
 
-public func drawCircleWith(color: Color, at position: Position, size: Double)
+func fillColor(_: Color) -> Void {
+    print("Boa")
+}
+
+func drawCircleWith(_: Color,_: Position,size: Double)
 {
-    var settings = CanvasSettings(mode: mode, shape: .circle, font: fontType, size: size, step: step, text: text)
+    
+    var settings = CanvasSettings(mode: .shape, shape: .circle, font: fontType, size: size, step: 0.1, text: text)
     let data = NSKeyedArchiver.archivedData(withRootObject: settings)
     liveView.send(.data(data))
 }
-
-public func drawSquareWith(color: Color, at position: Position, size: Double) {
-    var settings = CanvasSettings(mode: mode, shape: .square, font: fontType, size: size, step: step, text: text)
+func drawSquareWith(_: Color, _: Position, size: Double) {
+    var settings = CanvasSettings(mode: .shape, shape: .square, font: fontType, size: size, step: 0.1, text: text)
     let data = NSKeyedArchiver.archivedData(withRootObject: settings)
     liveView.send(.data(data))
 }
-
 //#-end-hidden-code
+
+
 /*:
  # Image Processing:
- 
- 
  ## Explicaçao super amadeirada
 */
-//#-code-completion(everything, hide)
-//#-code-completion(currentmodule, show)
-//#-code-completion(identifier, show, drawCircleWith(color:, at:, size:), drawSquareWith(color:, at:, size:))
-
-shapeSize = /*#-editable-code*/<#T##Size of the shapes##Double#>/*#-end-editable-code*/
 
 for pixel in pixels {
-    //#-editable-code Tap to enter code
+    let color: Position = pixel.color
+    let position: Position = pixel.position
     
-    //#-end-editable-code
+    /*#-editable-code Tap to enter code*//*#-end-editable-code*/
 }
+
 

@@ -18,16 +18,16 @@ extension UIColor {
         //
         //        self.init(displayP3Red: r, green: g, blue: b, alpha: 1.0)
         //
-        var red = Float(((hex >> 16) & 0xFF))
-        red /= 255.0
+        var blue = Float(((hex >> 16) & 0xFF))
+        blue /= 255.0
         var green = Float(((hex >> 8) & 0xFF))
         green /= 255.0
         
-        var blue = Float(((hex) & 0xFF))
-        blue /= 255.0
+        var red = Float(((hex) & 0xFF))
+        red /= 255.0
         
         
-        self.init(displayP3Red: CGFloat(blue), green: CGFloat(green), blue: CGFloat(red), alpha: 1.0)
+        self.init(displayP3Red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: 1.0)
         
     }
     

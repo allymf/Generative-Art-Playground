@@ -9,6 +9,9 @@ import Foundation
 
 public struct Pixel {
     
+    public typealias Position = Int
+    public typealias Color = Int
+    
     public var position: Position
     public var color: Color
     
@@ -20,26 +23,26 @@ public struct Pixel {
     
 }
 
-public struct Color {
-    public var red: Double
-    public var green: Double
-    public var blue: Double
-    
-    public init(red: Double, green: Double, blue: Double) {
-        self.red = red
-        self.green = green
-        self.blue = blue
-        
-    }
-}
-
-public struct Position {
-    public var x: Int
-    public var y: Int
-    
-    public init(x: Int, y: Int) {
-        self.x = x
-        self.y = y
-        
-    }
-}
+//public struct Color {
+//    public var red: Double
+//    public var green: Double
+//    public var blue: Double
+//
+//    public init(red: Double, green: Double, blue: Double) {
+//        self.red = red
+//        self.green = green
+//        self.blue = blue
+//
+//    }
+//}
+//
+//public struct Position {
+//    public var x: Int
+//    public var y: Int
+//
+//    public init(x: Int, y: Int) {
+//        self.x = x
+//        self.y = y
+//
+//    }
+//}
