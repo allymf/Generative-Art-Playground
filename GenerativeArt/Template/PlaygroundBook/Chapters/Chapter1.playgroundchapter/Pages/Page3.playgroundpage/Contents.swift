@@ -7,28 +7,37 @@
 //
 
 //#-code-completion(everything, hide)
-//#-code-completion(identifier, show, displayNextCharacterIn(text:))
-//#-code-completion(snippet, show, color, position)
+//#-code-completion(identifier, show, displayNextCharacterIn(fontSize:))
+//#-code-completion(snippet, show, color, position, text, fontSize, chalck, futura, noteworthy)
 //#-end-hidden-code
+
 import PlaygroundSupport
 import Foundation
 import CoreGraphics
 
 // Initial Settings Values
+
+let chalck: Font = .chalck
+let futura: Font = .futura
+let noteworthy: Font = .noteworthy
+
 var fontType: Font = .chalck
-var size: Double = 0.0
+var fontSize: Double = 0.0
 var step: Double = 0.0
 var text: String = ""
 
 let liveView = PlaygroundPage.current.liveView as! PlaygroundRemoteLiveViewProxy
 
-func displayNextCharacterIn(text: String, _: Color, _: Position) {
-    var settings = CanvasSettings(mode: .text, shape: .circle, font: fontType, size: size, step: step, text: text)
+public typealias Position = Int
+public typealias Color = Float
+
+func displayNextCharacterIn(_: String, _: Color, _: Position, fontSize: Double) {
+    var settings = CanvasSettings(mode: .text, shape: .circle, font: fontType, size: fontSize, step: 0.01, text: text)
     let data = NSKeyedArchiver.archivedData(withRootObject: settings)
     liveView.send(.data(data))
 }
 
-let pixels: [Pixel] = [Pixel(at: Position(x:0,y:0), with: Color(red: 45, green: 122, blue: 23))]
+let pixels: [Pixel] = [Pixel(at: 12, with: 11.0)]
 
 /*:
  # Image Processing:
@@ -38,18 +47,21 @@ let pixels: [Pixel] = [Pixel(at: Position(x:0,y:0), with: Color(red: 45, green: 
  
  ## Explicaçao super amadeirada
  */
+
 // Text Configuration
-text = /*#-editable-code*/<#T##Text to be drawn##String#>/*#-end-editable-code*/
-fontType = /*#-editable-code*/<#T##Font##Font#>/*#-end-editable-code*/
-size = /*#-editable-code*/<#T##Size of the shapes##Double#>/*#-end-editable-code*/
+text = /*#-editable-code Text to be shown*/""/*#-end-editable-code*/
+
+// Available fonts are chalck, futura, noteworthy
+fontType = /*#-editable-code FontType for the text*//*#-end-editable-code*/
+
+fontSize = /*#-editable-code*/<#T##Size of the shapes##Double#>/*#-end-editable-code*/
 
 
 for pixel in pixels {
-    let color = pixel.color
-    let position = pixel.position
-    //#-editable-code Tap to enter code
+    let color: Color = pixel.color
+    let position: Position = pixel.position
     
-    //#-end-editable-code
+    /*#-editable-code Tap to enter code*//*#-end-editable-code*/
 }
 
 

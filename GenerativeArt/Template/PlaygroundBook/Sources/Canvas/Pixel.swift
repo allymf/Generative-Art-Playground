@@ -10,7 +10,7 @@ import Foundation
 public struct Pixel {
     
     public typealias Position = Int
-    public typealias Color = Int
+    public typealias Color = Float
     
     public var position: Position
     public var color: Color

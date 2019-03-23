@@ -38,7 +38,7 @@ class CanvasViewController: UIViewController, PlaygroundLiveViewSafeAreaContaine
     var index = 0
     
     //- MARK: Settings
-    var cvSettings = CanvasSettings(mode: .shape,font: .chalck, size: 20.0, step: 0.02, text: "Erro")
+    var cvSettings = CanvasSettings(mode: .shape,font: .chalck, size: 0.0, step: 0.02, text: "Erro")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -123,7 +123,7 @@ class CanvasViewController: UIViewController, PlaygroundLiveViewSafeAreaContaine
     @objc
     func updateTimer(){
         
-        if index >= self.imgPixels.count - 1 {
+        if index >= self.imgPixels.count - 1 || self.cvSettings.size <= 0.0 {
             print("Acabouu")
             timer.invalidate()
             return
@@ -175,7 +175,6 @@ extension CanvasViewController: PlaygroundLiveViewMessageHandler {
     public func liveViewMessageConnectionOpened() {
         // Implement this method to be notified when the live view message connection is opened.
         // The connection will be opened when the process running Contents.swift starts running and listening for messages.
-        
         //self.lbDebug.text = "Abriu Conexão"
     }
     
@@ -204,15 +203,27 @@ extension CanvasViewController: PlaygroundLiveViewMessageHandler {
             //self.text = value
         case .data(let value):
             guard let newSettings = NSKeyedUnarchiver.unarchiveObject(with: value) as? CanvasSettings else {break}
-            newSettings.size += 9.0
-            self.cvSettings = newSettings
-            delegate?.setupWith(fontName: self.cvSettings.font.rawValue, fontSize: CGFloat(self.cvSettings.size))
-            resetIteration()
+            setUpFor(newSettings)
+            
         default:
             self.btPickImage.setTitle("Carai Burracha", for: .normal)
         }
         
     }
+    
+    
+    func setUpFor(_ newSettings: CanvasSettings) {
+        resetIteration()
+        self.cvSettings = newSettings
+        if newSettings.size > 0.0 {
+        cvSettings.size += 9.0
+        delegate?.setupWith(fontName: self.cvSettings.font.rawValue, fontSize: CGFloat(self.cvSettings.size))
+        }
+            
+        
+        
+    }
+    
     
 }
 
@@ -265,8 +276,12 @@ extension CanvasViewController: UIImagePickerControllerDelegate, UINavigationCon
         resetIteration()
         delegate?.resetCanvas()
         
+        if self.cvSettings.size > 0.0 {
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self,   selector: (#selector(CanvasViewController.updateTimer)), userInfo: nil, repeats: true)
-        
+        } else {
+            resetIteration()
+        }
+            
         picker.dismiss(animated: false, completion: nil)
     }
     

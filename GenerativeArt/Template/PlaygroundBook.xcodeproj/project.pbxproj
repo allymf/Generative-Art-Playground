@@ -122,7 +122,7 @@
 		3FB6180F2242C0BC0074F438 /* UIImage+ScaleToSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ScaleToSize.swift"; sourceTree = "<group>"; };
 		3FB618112242C0F80074F438 /* UIColor+InitFromHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+InitFromHex.swift"; sourceTree = "<group>"; };
 		3FB618132242C39B0074F438 /* UIViewController+ViewForIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ViewForIdentifier.swift"; sourceTree = "<group>"; };
-		5E086DC02051C5A7004D8D25 /* Generative Art.playgroundbook */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Generative Art.playgroundbook"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E086DC02051C5A7004D8D25 /* Generative Magic.playgroundbook */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Generative Magic.playgroundbook"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E086DC72051DD03004D8D25 /* BookOverridingBuildSettings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BookOverridingBuildSettings.xcconfig; sourceTree = "<group>"; };
 		5E086DCD2051DDB8004D8D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LiveView.storyboard; sourceTree = "<group>"; };
 		5E086DCF2051DF0F004D8D25 /* Manifest.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Manifest.plist; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 		5E086DA4204F706E004D8D25 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5E086DC02051C5A7004D8D25 /* Generative Art.playgroundbook */,
+				5E086DC02051C5A7004D8D25 /* Generative Magic.playgroundbook */,
 				5EF2F9AB2054BBF300191409 /* libBook_Sources.a */,
 				5EA2E3BD2056F35A00416A35 /* LiveViewTestApp.app */,
 			);
@@ -338,7 +338,7 @@
 			);
 			name = PlaygroundBook;
 			productName = PlaygroundBook;
-			productReference = 5E086DC02051C5A7004D8D25 /* Generative Art.playgroundbook */;
+			productReference = 5E086DC02051C5A7004D8D25 /* Generative Magic.playgroundbook */;
 			productType = "com.apple.product-type.bundle";
 		};
 		5EA2E3BC2056F35A00416A35 /* LiveViewTestApp */ = {

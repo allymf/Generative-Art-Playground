@@ -20,11 +20,11 @@ import CoreGraphics
 private let fontType: Font = .chalck
 let text: String = " "
 
-public let pixels = [Pixel(at: 11, with: 19)]
+public let pixels = [Pixel(at: 11, with: 19.0)]
 
 let liveView = PlaygroundPage.current.liveView as! PlaygroundRemoteLiveViewProxy
 public typealias Position = Int
-public typealias Color = Int
+public typealias Color = Float
 
 func fillColor(_: Color) -> Void {
     print("Boa")
@@ -51,7 +51,7 @@ func drawSquareWith(_: Color, _: Position, size: Double) {
 */
 
 for pixel in pixels {
-    let color: Position = pixel.color
+    let color: Color = pixel.color
     let position: Position = pixel.position
     
     /*#-editable-code Tap to enter code*//*#-end-editable-code*/
