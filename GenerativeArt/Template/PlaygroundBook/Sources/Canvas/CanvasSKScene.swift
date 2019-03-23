@@ -17,17 +17,23 @@ class CanvasSKScene: SKScene {
     var fontSize: CGFloat = 40
     var fontName: String = "Chalkduster"
     
+    var selectNode = SKLabelNode()
+    
     var nodes = [SKNode]()
     
     public override func didMove(to: SKView) {
-        //        let winner = SKLabelNode(fontNamed: "Chalkduster")
-        //        winner.text = "You Win!"
-        //        winner.fontSize = 65
-        //        winner.fontColor = SKColor.green
-        //        winner.position = CGPoint(x: 0, y: 0)
-        //
-        //        self.addChild(winner)
-        //
+        self.selectNode = SKLabelNode(text: "Select an Image")
+        self.selectNode.fontSize = 40
+        if #available(iOS 11.0, *) {
+            self.selectNode.numberOfLines = 45
+        }
+        self.selectNode.fontColor = .white
+        self.selectNode.verticalAlignmentMode = .center
+        self.selectNode.horizontalAlignmentMode = .center
+        self.selectNode.position = CGPoint(x: self.frame.width/2, y: self.frame.height/2)
+
+        self.addChild(self.selectNode)
+
         
     }
     
@@ -40,12 +46,18 @@ class CanvasSKScene: SKScene {
 }
 
 extension CanvasSKScene: CanvasDelegate {
+    func displayFeedBack(text: String) {
+        self.selectNode.text = text
+    }
+    
     func resetCanvas() {
         self.x = 0
         self.y = self.frame.height
         
         self.removeAllChildren()
         self.nodes = [SKNode]()
+        
+        self.addChild(self.selectNode)
     }
     
     func backgroundWith(_ color: UIColor){
@@ -69,7 +81,7 @@ extension CanvasSKScene: CanvasDelegate {
     
     
     func displayShapeOf(_ type: ShapeType, with color: UIColor)  {
-        
+        self.selectNode.removeFromParent()
         if self.y < 0 {
             //self.y = self.frame.height-fontSize*2
             return
@@ -96,7 +108,7 @@ extension CanvasSKScene: CanvasDelegate {
     }
     
     func displayText(_ text: String, with color: UIColor) {
-        
+        self.selectNode.removeFromParent()
         if self.y < 0 {
             //self.y = self.frame.height-fontSize*2
             return

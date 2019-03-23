@@ -11,9 +11,6 @@ import UIKit
 extension UIImage {
     
     func scaledToSize(_ size: CGSize) -> UIImage? {
-        //UIGraphicsBeginImageContext(newSize);
-        // In next line, pass 0.0 to use the current device's pixel scaling factor (and thus account for Retina resolution).
-        // Pass 1.0 to force exact pixel size.
         
         var scaledImageRect = CGRect.zero;
         

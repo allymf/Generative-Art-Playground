@@ -218,6 +218,8 @@ extension CanvasViewController: PlaygroundLiveViewMessageHandler {
         if newSettings.size > 0.0 {
         cvSettings.size += 9.0
         delegate?.setupWith(fontName: self.cvSettings.font.rawValue, fontSize: CGFloat(self.cvSettings.size))
+          timer = Timer.scheduledTimer(timeInterval: 0.01, target: self,   selector: (#selector(CanvasViewController.updateTimer)), userInfo: nil, repeats: true)
+            
         }
             
         
@@ -276,10 +278,13 @@ extension CanvasViewController: UIImagePickerControllerDelegate, UINavigationCon
         resetIteration()
         delegate?.resetCanvas()
         
+        delegate?.displayFeedBack(text: "Now Run your code")
+        
         if self.cvSettings.size > 0.0 {
-        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self,   selector: (#selector(CanvasViewController.updateTimer)), userInfo: nil, repeats: true)
+//        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self,   selector: (#selector(CanvasViewController.updateTimer)), userInfo: nil, repeats: true)
         } else {
             resetIteration()
+            
         }
             
         picker.dismiss(animated: false, completion: nil)

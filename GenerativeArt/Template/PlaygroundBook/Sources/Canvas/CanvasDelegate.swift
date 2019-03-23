@@ -20,4 +20,6 @@ protocol CanvasDelegate {
     
     func resetCanvas()
     
+    func displayFeedBack(text: String) -> Void 
+    
 }

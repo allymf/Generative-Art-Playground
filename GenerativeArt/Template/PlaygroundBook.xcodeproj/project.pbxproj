@@ -11,7 +11,6 @@
 		3F709879223EE4FA001275D1 /* AudioLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F709878223EE4FA001275D1 /* AudioLiveViewController.swift */; };
 		3F9A870C2242DAB20083587F /* CanvasSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A870B2242DAB20083587F /* CanvasSettings.swift */; };
 		3F9A870E2242E8970083587F /* DrawMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A870D2242E8970083587F /* DrawMode.swift */; };
-		3F9A87122243D9F10083587F /* ContentsInputsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A87112243D9F00083587F /* ContentsInputsDelegate.swift */; };
 		3F9A87142243DAA50083587F /* Pixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A87132243DAA50083587F /* Pixel.swift */; };
 		3F9A87162244AC400083587F /* Cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9A87152244AC400083587F /* Cover.png */; };
 		3F9A871822452D400083587F /* wwdc19.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9A871722452D400083587F /* wwdc19.png */; };
@@ -110,7 +109,6 @@
 		3F709878223EE4FA001275D1 /* AudioLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioLiveViewController.swift; sourceTree = "<group>"; };
 		3F9A870B2242DAB20083587F /* CanvasSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasSettings.swift; sourceTree = "<group>"; };
 		3F9A870D2242E8970083587F /* DrawMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawMode.swift; sourceTree = "<group>"; };
-		3F9A87112243D9F00083587F /* ContentsInputsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsInputsDelegate.swift; sourceTree = "<group>"; };
 		3F9A87132243DAA50083587F /* Pixel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixel.swift; sourceTree = "<group>"; };
 		3F9A87152244AC400083587F /* Cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cover.png; sourceTree = "<group>"; };
 		3F9A871722452D400083587F /* wwdc19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wwdc19.png; sourceTree = "<group>"; };
@@ -169,14 +167,13 @@
 			children = (
 				3FB618022242BB710074F438 /* CanvasViewController.swift */,
 				3FB618052242BCE90074F438 /* CanvasSKScene.swift */,
+				3FB6180D2242C04A0074F438 /* CanvasDelegate.swift */,
 				3FB618072242BD280074F438 /* ShapeType.swift */,
 				3FB6180B2242BE380074F438 /* Font.swift */,
-				3FB6180D2242C04A0074F438 /* CanvasDelegate.swift */,
 				3FB6180F2242C0BC0074F438 /* UIImage+ScaleToSize.swift */,
 				3FB618112242C0F80074F438 /* UIColor+InitFromHex.swift */,
 				3F9A870B2242DAB20083587F /* CanvasSettings.swift */,
 				3F9A870D2242E8970083587F /* DrawMode.swift */,
-				3F9A87112243D9F00083587F /* ContentsInputsDelegate.swift */,
 				3F9A87132243DAA50083587F /* Pixel.swift */,
 			);
 			path = Canvas;
@@ -489,7 +486,6 @@
 				3FB618032242BB710074F438 /* CanvasViewController.swift in Sources */,
 				3FB618082242BD280074F438 /* ShapeType.swift in Sources */,
 				5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */,
-				3F9A87122243D9F10083587F /* ContentsInputsDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
