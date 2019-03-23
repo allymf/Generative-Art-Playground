@@ -48,7 +48,7 @@ The first thing I wanna show to you is the bases of image processing. Using the 
  
  # Image
  
- But how does it work?
+ ### But how does it work?
  
  Well, normally you would iterate over a structure that contais every single pixel data from the image, and at each each step do something with the pixel data, like analyzing it, changing it or using it to draw another image.
  
@@ -62,7 +62,7 @@ The first thing I wanna show to you is the bases of image processing. Using the 
  
  * We are going to pass to the selected function: the pixel’s **color**, its **positions**, and a **size** value
  
- * After that you shoul Tap the big white button written **Pick an image** to select what we are going to analyse.
+ * After that you should Tap the big white button written **Pick an image** to select what we are going to analyse.
  
  * callout(Tip):
  Start with a lower number for size, and then start to experiment with it on other executions. But keep in mind that the value should be greater than zero for something to be shown.
