@@ -9,7 +9,7 @@
 //#-code-completion(everything, hide)
 //#-code-completion(identifier, show, displayNextCharacterIn(fontSize:))
 //#-code-completion(snippet, show, color, position, text, fontSize, chalck, futura, noteworthy)
-//#-end-hidden-code
+
 
 import PlaygroundSupport
 import Foundation
@@ -38,14 +38,33 @@ func displayNextCharacterIn(_: String, _: Color, _: Position, fontSize: Double) 
 }
 
 let pixels: [Pixel] = [Pixel(at: 12, with: 11.0)]
+//#-end-hidden-code
 
 /*:
- # Image Processing:
+ Long before the creation of any of the sofisticated technologies we have today, people already made art using glyphs or letters.
 
- ![An ASCII Art style lettering, reading WWDC 19](wwdc19.png "An ASCII Art style lettering, reading WWDC 19")
+ During the period which typewriters were the standard, some people use to make drawings using the types. This kind of expression evolved when computers were introduced and along with them lots of different characters.
  
+ Due to computers limitations at the time, that would render text really well and fast but not other more complex graphics. People used text to create graphics.
  
- ## Explicaçao super amadeirada
+ Here’s a little show case:
+ 
+  ![An ASCII Art style lettering, reading WWDC 19](wwdc19.png "An ASCII Art style lettering, reading WWDC 19")
+ 
+ Most home computers used only one font, so this kind of creations droped some seasoning to the experience back then. The characteristic of the fonts back then being `monospaced` was a determinant factor to the style of the drawings.
+ 
+ ## Hands on:
+ 
+ I hope you remember the image processing routine, because we’re going to use it again
+ 
+ We are going to create an ASCII art intervention on an image.
+ 
+ The code will be very similar, but instead of drawing a shape, we are going to write a **letter** in the pixel’s **position** and using the pixel **color**.
+ 
+ With that in mind let's configure the text that's gonna compose the Artwork:
+
+ You can set the text to be written, its font and its size.
+
  */
 
 // Text Configuration
@@ -56,6 +75,15 @@ fontType = /*#-editable-code FontType for the text*//*#-end-editable-code*/
 
 fontSize = /*#-editable-code*/<#T##Size of the shapes##Double#>/*#-end-editable-code*/
 
+/*:
+ 
+ * callout(Tip):
+ You can create a ASCII art of your photo using your name, that’s how personal it can get :)
+ 
+ 
+ The for in loop again. pretty familiar, huh? But now we are going to use a function called `displayNextCharacterIn`
+ 
+ */
 
 for pixel in pixels {
     let color: Color = pixel.color
@@ -64,4 +92,10 @@ for pixel in pixels {
     /*#-editable-code Tap to enter code*//*#-end-editable-code*/
 }
 
-
+/*:
+ 
+ Feel proud of your creation? Tap the three dots button and then tap save an image, then you can print it and put it on the fridge. :)
+ 
+ [Next: Conclusion](@next)
+ 
+ */

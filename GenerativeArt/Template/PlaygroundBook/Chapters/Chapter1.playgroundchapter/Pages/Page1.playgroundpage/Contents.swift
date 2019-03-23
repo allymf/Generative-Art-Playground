@@ -5,74 +5,28 @@
 //  Abstract:
 //  The Swift file containing the source code edited by the user of this playground book.
 //
-import PlaygroundSupport
-
-let str = "Musica"
-
-let liveView = PlaygroundPage.current.liveView as! PlaygroundRemoteLiveViewProxy
-liveView.send(.string(str))
+//#-code-completion(everything, hide)
 
 //#-end-hidden-code
-//#-hidden-code
 
-// This Won't be shown
-
-//#-end-hidden-code
-//#-hidden-code
-// Beneath there is a markdown block
-//#-end-hidden-code
 /*:
  
- # Title
- ## Subtitle
+ Many people tend to think that “Art is for artist”. I was very frustrated with this concept, being, among other things, a coder which is not seen as a potential artist by common sense.
  
- ### Paragraph
+ Art comes in different forms, by people with various backgrounds, and is created with such diverse tools. Code can be a tool for creating beautiful art
  
- Normal Text
+ During a very dark period of my life, I really felt the need to express my feeling. I spent a lot of time looking for a venue to express my feelings through art. I wasn’t so good with the guitar to “solo” my feeling out, nor was I too able to draw awesome drawings. My abilities were almost always focused on digital media. e.g. Designing and programing. But my work was always very pragmatic, and I felt the urge to use them in a more creative way.
  
- - Important:
- There are some other kinds of highlights.
+ Last year, I attend a subject at my university and there I discovered the Generative Art.
  
- - Note:
- Give me an E Major, conductor.
+ And it blew my mind. 🤯🤩
  
- + Important:
- This is very cool.
+ Finally was I able to use my skills in a more artistic way.
  
- + Example:
- This is an example.
+ Throughout this playground I would like to show you the magic of generative art
+
  
- # Italic:
- *This text is italic*
- 
- # Bold:
- **This text is bold**
- 
- # Monospaced:
- `This text is bold`
- 
- * callout(Tip):
- This is a precious tip
- 
- * callout(Custom):
- This is a custom callout
- 
- # Photo:
- ![Description of Photo](Alysson.HEIC "Um cara diferenciado")
- 
- # List:
- * First item
- * Second Item
- 
- # Numbered List:
- 1. First item
- 2. Second Item
- 
- # Link to Web:
- [Apple Site](htttp://www.apple.com)
- 
- # Link to other Pages:
- [Next Page: Num Sei](@next)
+ [Next Page: Image Processing](@next)
  
  
  */

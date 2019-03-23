@@ -9,9 +9,6 @@
 //#-code-completion(everything, hide)
 //#-code-completion(identifier, show, drawCircleWith(size:), drawSquareWith(size:))
 //#-code-completion(snippet, show, color, position)
-//#-end-hidden-code
-
-//#-hidden-code
 import PlaygroundSupport
 import Foundation
 import CoreGraphics
@@ -44,10 +41,32 @@ func drawSquareWith(_: Color, _: Position, size: Double) {
 }
 //#-end-hidden-code
 
-
 /*:
- # Image Processing:
- ## Explicaçao super amadeirada
+The first thing I wanna show to you is the bases of image processing. Using the images data to generate something upon it, create an infinity of creative possibilities. Like the creation artistic filters, color ordination, glitch art.
+ 
+ Here's an example of one artistic filter I created using code
+ 
+ # Image
+ 
+ But how does it work?
+ 
+ Well, normally you would iterate over a structure that contais every single pixel data from the image, and at each each step do something with the pixel data, like analyzing it, changing it or using it to draw another image.
+ 
+ 
+ ### Hands on:
+ 
+ Down below there is a for in loop that iterates over and array of pixels.
+ 
+ Here's what we're going to do:
+ * On each iteration we are going to draw a shape, by using either `drawCircleWith` or `drawSquareWith`.
+ 
+ * We are going to pass to the selected function: the pixel’s **color**, its **positions**, and a **size** value
+ 
+ * After that you shoul Tap the big white button written **Pick an image** to select what we are going to analyse.
+ 
+ * callout(Tip):
+ Start with a lower number for size, and then start to experiment with it on other executions. But keep in mind that the value should be greater than zero for something to be shown.
+ 
 */
 
 for pixel in pixels {
@@ -57,4 +76,12 @@ for pixel in pixels {
     /*#-editable-code Tap to enter code*//*#-end-editable-code*/
 }
 
+/*:
+ 
+ If everything went alright, you should now have a stylized version of the photo you just choose. Neat, ain't it? :)
+ 
+ If you want so, tap the three dots button up in the NavBar a select take a picture, so you can save you beatiful artwork. Maybe showoff to your friends by posting on social media :p
 
+ [Next: ASCII Art](@next)
+ 
+ */
