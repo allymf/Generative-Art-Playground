@@ -81,6 +81,7 @@ class CanvasViewController: UIViewController, PlaygroundLiveViewSafeAreaContaine
         
     }
     
+    
     func loadPixels(of image : UIImage) {
         let inputCGImage = image.cgImage!
         let width = inputCGImage.width
@@ -337,10 +338,30 @@ extension CanvasViewController: UIImagePickerControllerDelegate, UINavigationCon
         myPickerController.delegate = self;
         myPickerController.sourceType = sourceType
         
+        myPickerController.modalPresentationStyle = UIModalPresentationStyle.custom
+        myPickerController.transitioningDelegate = self
+    
+        
         self.present(myPickerController, animated: true, completion: nil)
         
         
     }
     
+    
+}
+
+extension CanvasViewController: UIViewControllerTransitioningDelegate, PresentationDataSource {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        let vc = PresentationViewController(presentedViewController: presented, presenting: presenting)
+        vc.dataSource = self
+        
+        return vc
+        
+        
+    }
+    
+    func size(for: UIPresentationController) -> CGRect {
+        return self.contentView.frame
+    }
     
 }

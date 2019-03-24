@@ -17,6 +17,8 @@
 		3F9A87222246AF4F0083587F /* Cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9A87212246AF4F0083587F /* Cover.png */; };
 		3F9A87242246B2960083587F /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A87232246B2960083587F /* IntroViewController.swift */; };
 		3F9A87262246B72C0083587F /* me.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9A87252246B72C0083587F /* me.png */; };
+		3F9A872C22470DB00083587F /* PresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A872B22470DB00083587F /* PresentationViewController.swift */; };
+		3F9A872E224713830083587F /* PresentationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A872D224713830083587F /* PresentationDataSource.swift */; };
 		3FB618032242BB710074F438 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB618022242BB710074F438 /* CanvasViewController.swift */; };
 		3FB618062242BCE90074F438 /* CanvasSKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB618052242BCE90074F438 /* CanvasSKScene.swift */; };
 		3FB618082242BD280074F438 /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB618072242BD280074F438 /* ShapeType.swift */; };
@@ -118,6 +120,8 @@
 		3F9A87212246AF4F0083587F /* Cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cover.png; sourceTree = "<group>"; };
 		3F9A87232246B2960083587F /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		3F9A87252246B72C0083587F /* me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = me.png; sourceTree = "<group>"; };
+		3F9A872B22470DB00083587F /* PresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewController.swift; sourceTree = "<group>"; };
+		3F9A872D224713830083587F /* PresentationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationDataSource.swift; sourceTree = "<group>"; };
 		3FB618022242BB710074F438 /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 		3FB618052242BCE90074F438 /* CanvasSKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasSKScene.swift; sourceTree = "<group>"; };
 		3FB618072242BD280074F438 /* ShapeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeType.swift; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 				3F9A870B2242DAB20083587F /* CanvasSettings.swift */,
 				3F9A870D2242E8970083587F /* DrawMode.swift */,
 				3F9A87132243DAA50083587F /* Pixel.swift */,
+				3F9A872B22470DB00083587F /* PresentationViewController.swift */,
+				3F9A872D224713830083587F /* PresentationDataSource.swift */,
 			);
 			path = Canvas;
 			sourceTree = "<group>";
@@ -482,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9A872C22470DB00083587F /* PresentationViewController.swift in Sources */,
 				3FB6180E2242C04A0074F438 /* CanvasDelegate.swift in Sources */,
 				3FB618122242C0F80074F438 /* UIColor+InitFromHex.swift in Sources */,
 				5E3196F32061DEA40077BBD7 /* LiveViewSupport.swift in Sources */,
@@ -495,6 +502,7 @@
 				3FB618102242C0BC0074F438 /* UIImage+ScaleToSize.swift in Sources */,
 				3F9A870E2242E8970083587F /* DrawMode.swift in Sources */,
 				3FB618032242BB710074F438 /* CanvasViewController.swift in Sources */,
+				3F9A872E224713830083587F /* PresentationDataSource.swift in Sources */,
 				3FB618082242BD280074F438 /* ShapeType.swift in Sources */,
 				5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */,
 				3F9A87242246B2960083587F /* IntroViewController.swift in Sources */,
