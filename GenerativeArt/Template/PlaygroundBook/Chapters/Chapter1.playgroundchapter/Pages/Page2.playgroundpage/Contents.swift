@@ -60,9 +60,9 @@ The first thing I wanna show to you is the bases of image processing. Using the 
  - Experiment:
  Here's what we're going to do
  
- 1. On each iteration we are going to draw a shape, by using either `drawCircleWith` or `drawSquareWith`.
+    1. On each iteration we are going to draw a shape, by using either `drawCircleWith` or `drawSquareWith`.
  
- 2. We are going to pass to the selected function: the pixel’s **color**, its **positions**, and a **size** value
+    2. We are going to pass to the selected function: the pixel’s **color**, its **positions**, and a **size** value
  
  * callout(Tip):
  Start with a lower number for size, and then start to experiment with it on other executions. But keep in mind that the value should be greater than zero for something to be shown.
