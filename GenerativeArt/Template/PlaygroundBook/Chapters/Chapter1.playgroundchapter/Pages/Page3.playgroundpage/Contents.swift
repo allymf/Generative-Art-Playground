@@ -41,17 +41,15 @@ let pixels: [Pixel] = [Pixel(at: 12, with: 11.0)]
 //#-end-hidden-code
 
 /*:
- Long before the creation of any of the sofisticated technologies we have today, people already made art using glyphs or letters.
-
- During the period which typewriters were the standard, some people use to make drawings using the types. This kind of expression evolved when computers were introduced and along with them lots of different characters.
+During the period which typewriters were the standard, some people use to make drawings using the types. This kind of expression evolved when computers were introduced and along with them lots of different characters.
  
- Due to computers limitations at the time, that would render text really well and fast but not other more complex graphics. People used text to create graphics.
+ Due to computers limitations at the time, that would render text really well and fast but could not do so with other more complex graphics. People used text to create graphics.
  
  Here’s a little show case:
  
   ![An ASCII Art style lettering, reading WWDC 19](wwdc19.png "An ASCII Art style lettering, reading WWDC 19")
  
- Most home computers used only one font, so this kind of creations droped some seasoning to the experience back then. The characteristic of the fonts back then being `monospaced` was a determinant factor to the style of the drawings.
+ The fonts' characteristic back then of being `monospaced` was a determinant factor to the style of the drawings. Most home computers used only one font, so this kind of creations droped some seasoning to the experience back then.
  
  ## Hands on:
  
@@ -94,7 +92,7 @@ for pixel in pixels {
 
 /*:
  
- Feel proud of your creation? Tap the three dots button and then tap save an image, then you can print it and put it on the fridge. :)
+ Feel proud of your creation? Tap the three dots button and then tap Take Picture, then you can print it and put it on the fridge. 😎
  
  [Next: Conclusion](@next)
  

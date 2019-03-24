@@ -11,19 +11,21 @@
 
 /*:
  
- Many people tend to think that “Art is for artist”. I was very frustrated with this concept, being, among other things, a coder which is not seen as a potential artist by common sense.
+ Hi, I'm **Alysson**. That's a picture of myself on the right. 👉🏼
  
- Art comes in different forms, by people with various backgrounds, and is created with such diverse tools. Code can be a tool for creating beautiful art
+ I'm a research intern at **Apple Developer Academy - IFCE**, and undergraduate of **Digital Media and Systems** at **Universidade Federal do Ceará**.
  
- During a very dark period of my life, I really felt the need to express my feeling. I spent a lot of time looking for a venue to express my feelings through art. I wasn’t so good with the guitar to “solo” my feeling out, nor was I too able to draw awesome drawings. My abilities were almost always focused on digital media. e.g. Designing and programing. But my work was always very pragmatic, and I felt the urge to use them in a more creative way.
+ ### Prepared for storytime?
  
- Last year, I attend a subject at my university and there I discovered the Generative Art.
+ Many people tend to think that “*Art is for artist*”. I was very frustrated with this concept, being, among other things, a coder which is not seen as a potential artist by common sense.🙇🏻‍♂️
  
- And it blew my mind. 🤯🤩
+ But art comes in different forms, by people with various backgrounds, and is created with such diverse tools. Code can be a tool for creating beautiful art.🎨🖌
  
- Finally was I able to use my skills in a more artistic way.
+ During a very dark period of my life, I really felt the need to express my feelings. I spent a lot of time looking for a venue to do so artistically. But I couldn't find a media that fit my abilities, which are concentrated on digital media, mainly code. I felt the urge to use them in a more creative way.🤔
  
- Throughout this playground I would like to show you the magic of generative art
+ Last year, I attend a subject at my university and there I discovered the Generative Art and it blew my mind. 🤯🤩
+ 
+ I finally found a way and throughout this playground I would like to show you the magic of it.
 
  
  [Next Page: Image Processing](@next)

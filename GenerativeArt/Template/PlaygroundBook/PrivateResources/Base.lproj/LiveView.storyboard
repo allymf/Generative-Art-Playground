@@ -116,5 +116,36 @@
             </objects>
             <point key="canvasLocation" x="1288.8" y="95.802098950524751"/>
         </scene>
+        <!--IntroVC-->
+        <scene sceneID="nJg-AI-RRI">
+            <objects>
+                <viewController restorationIdentifier="IntroVC" storyboardIdentifier="IntroVC" title="IntroVC" id="KjF-zD-a4c" customClass="Book_Sources_IntroViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GQm-IA-lar">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="ivMe" image="me.png" translatesAutoresizingMaskIntoConstraints="NO" id="oW0-00-P3X">
+                                <rect key="frame" x="87.5" y="243.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Vei-aW-t5E"/>
+                                    <constraint firstAttribute="width" constant="200" id="uQj-Ze-ZC9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oW0-00-P3X" firstAttribute="centerX" secondItem="cmw-TR-yri" secondAttribute="centerX" id="8sC-Yn-hLe"/>
+                            <constraint firstItem="oW0-00-P3X" firstAttribute="centerY" secondItem="cmw-TR-yri" secondAttribute="centerY" id="dGD-Eh-lbx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cmw-TR-yri"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sf9-YJ-Ovd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2039" y="106"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="me.png" width="1032" height="1032"/>
+    </resources>
 </document>

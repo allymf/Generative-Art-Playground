@@ -42,9 +42,9 @@ func drawSquareWith(_: Color, _: Position, size: Double) {
 //#-end-hidden-code
 
 /*:
-The first thing I wanna show to you is the bases of image processing. Using the images data to generate something upon it, create an infinity of creative possibilities. Like the creation artistic filters, color ordination, glitch art.
+The first thing I wanna show to you is the bases of image processing. Using the images data to generate something upon it, create an infinity of creative possibilities. Like the creation artistic filters, create a color ordinated version of the image, glitch art.
  
- Here's an example of one artistic filter I created using code
+ Here's an example of one artistic filter I created using code:
  
  ![Photo of a man with long curly hair using rounded glasses in grayscale, followed by a photo of a red galaxy, both of them with arrow in the bottom pointin to a box written "My Filter" which also has a arrow coming from its bottom, pointing to a image that is the combination of both previously said photos in a double exposure technic](ImgFilterShowcase.png "Photo of a man with long curly hair using rounded glasses in grayscale, followed by a photo of a red galaxy, both of them with arrow in the bottom pointin to a box written 'My Filter' which also has a arrow coming from its bottom, pointing to a image that is the combination of both previously said photos in a double exposure technic")
  
@@ -84,7 +84,7 @@ for pixel in pixels {
  
  If everything went alright, you should now have a stylized version of the photo you just choose. Neat, ain't it? 😄
  
- If you want so, tap the three dots button up in the NavBar a select take a picture, so you can save you beatiful artwork. Maybe showoff to your friends by posting on social media 😜
+ If you want so, tap the three dots button up in the NavBar a select Take Picture, so you can save you beatiful artwork. Maybe show off to your friends by posting on social media. 😜
 
  [Next: ASCII Art](@next)
  
