@@ -135,7 +135,7 @@ class CanvasViewController: UIViewController, PlaygroundLiveViewSafeAreaContaine
         
         switch self.cvSettings.mode {
         case .text:
-            let chars = Array(self.cvSettings.text)
+            let chars = Array(self.cvSettings.text.uppercased())
             let letter = chars[textCount]
             delegate?.displayText("\(letter)", with: color)
             textCount+=1
