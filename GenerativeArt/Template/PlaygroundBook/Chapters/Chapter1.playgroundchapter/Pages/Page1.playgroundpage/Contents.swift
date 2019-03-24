@@ -16,15 +16,15 @@
  
  ### Prepared for storytime?
  
- Many people tend to think that “*Art is for artist*”. I was very frustrated with this concept, being, among other things, a coder which is not seen as a potential artist by common sense.🙇🏻‍♂️
+ Many people tend to think that “*Art is for artist*”. I was very frustrated with this concept, being, among other things, a coder.🙇🏻‍♂️
  
- But art comes in different forms, by people with various backgrounds, and is created with such diverse tools. Code can be a tool for creating beautiful art.🎨🖌
+ But art is about diversity, in every single sense of the word.🎨🖌
  
- During a very dark period of my life, I really felt the need to express my feelings. I spent a lot of time looking for a venue to do so artistically. But I couldn't find a media that fit my abilities, which are concentrated on digital media, mainly code. I felt the urge to use them in a more creative way.🤔
+ During a very dark period of my life, I really felt the need to express my feelings. I spent a lot of time looking for a venue to do so artistically. But I couldn't find one that fit my abilities. I felt the urge to use them in a more creative way.🤔
  
- Last year, I attend a subject at my university and there I discovered the Generative Art and it blew my mind. 🤯🤩
+ Last year, I attend a course at my university and there discovered the Generative Art and it blew my mind. 🤯🤩
  
- I finally found a way and throughout this playground I would like to show you the magic of it.
+ Throughout this playground I would like to show you how magical it is.
 
  
  [Next Page: Image Processing](@next)

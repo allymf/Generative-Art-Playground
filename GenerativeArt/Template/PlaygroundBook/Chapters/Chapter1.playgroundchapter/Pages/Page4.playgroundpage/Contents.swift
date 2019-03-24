@@ -8,12 +8,12 @@
 //#-code-completion(everything, hide)
 //#-end-hidden-code
 /*:
- I hope that this experience gave you some insights on generative art . I hope I could transmit you a little bit of the magic I see in it.🧙🏼‍♂️
+ I hope you could see the magic in **Generative Art** and all it's potencials.🧙🏼‍♂️
  
- There are great tools, for you to unleash your potential in this area, e.g. Processing and Isadora. But now it's up to you.😉
+ There are great tools for generative art out there, e.g. Processing and Isadora. But now it's up to you to explore.😉
  
  - Note:
- This playgroundbook cover, the filtered picture of myself, and the ASCII art lettering were all made using processes of generative art.
+ This Playground Book cover, the filtered picture of myself, and the ASCII art lettering were all made using processes of generative art.
  
  - Note:
  The cover and the filtered image were solely created by me, using Processing.💪🏼

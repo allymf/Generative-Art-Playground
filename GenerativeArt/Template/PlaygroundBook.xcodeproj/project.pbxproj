@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F616C64223E02FA00592034 /* MessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F616C63223E02FA00592034 /* MessageHandler.swift */; };
-		3F709879223EE4FA001275D1 /* AudioLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F709878223EE4FA001275D1 /* AudioLiveViewController.swift */; };
 		3F9A870C2242DAB20083587F /* CanvasSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A870B2242DAB20083587F /* CanvasSettings.swift */; };
 		3F9A870E2242E8970083587F /* DrawMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A870D2242E8970083587F /* DrawMode.swift */; };
 		3F9A87142243DAA50083587F /* Pixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A87132243DAA50083587F /* Pixel.swift */; };
@@ -37,7 +35,6 @@
 		5EA2E3DB2056F8D100416A35 /* PlaygroundSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA2E3D72056F88700416A35 /* PlaygroundSupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5EBEC2F0205B399300975D3F /* LiveViewHost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBEC2EF205B396500975D3F /* LiveViewHost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5EF2F97C2054B6E400191409 /* ManifestPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EF2F97E2054B6E400191409 /* ManifestPlist.strings */; };
-		5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2F9AD2054BBF300191409 /* LiveViewController.swift */; };
 		5EF2F9B72054E6FB00191409 /* Chapters in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5EF2F9B62054E6F900191409 /* Chapters */; };
 		5EF2F9B82054E6FE00191409 /* Sources in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5EF2F9A52054BBB200191409 /* Sources */; };
 /* End PBXBuildFile section */
@@ -110,8 +107,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3F616C63223E02FA00592034 /* MessageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHandler.swift; sourceTree = "<group>"; };
-		3F709878223EE4FA001275D1 /* AudioLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioLiveViewController.swift; sourceTree = "<group>"; };
 		3F9A870B2242DAB20083587F /* CanvasSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasSettings.swift; sourceTree = "<group>"; };
 		3F9A870D2242E8970083587F /* DrawMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawMode.swift; sourceTree = "<group>"; };
 		3F9A87132243DAA50083587F /* Pixel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixel.swift; sourceTree = "<group>"; };
@@ -149,7 +144,6 @@
 		5EF2F97D2054B6E400191409 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ManifestPlist.strings; sourceTree = "<group>"; };
 		5EF2F9A52054BBB200191409 /* Sources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sources; sourceTree = "<group>"; };
 		5EF2F9AB2054BBF300191409 /* libBook_Sources.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBook_Sources.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EF2F9AD2054BBF300191409 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		5EF2F9B62054E6F900191409 /* Chapters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Chapters; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -314,10 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				3FB618042242BB7E0074F438 /* Canvas */,
-				5EF2F9AD2054BBF300191409 /* LiveViewController.swift */,
 				5E3196F22061DEA40077BBD7 /* LiveViewSupport.swift */,
-				3F616C63223E02FA00592034 /* MessageHandler.swift */,
-				3F709878223EE4FA001275D1 /* AudioLiveViewController.swift */,
 				3FB618132242C39B0074F438 /* UIViewController+ViewForIdentifier.swift */,
 				3F9A87232246B2960083587F /* IntroViewController.swift */,
 			);
@@ -492,11 +483,9 @@
 				3FB6180E2242C04A0074F438 /* CanvasDelegate.swift in Sources */,
 				3FB618122242C0F80074F438 /* UIColor+InitFromHex.swift in Sources */,
 				5E3196F32061DEA40077BBD7 /* LiveViewSupport.swift in Sources */,
-				3F709879223EE4FA001275D1 /* AudioLiveViewController.swift in Sources */,
 				3FB618142242C39B0074F438 /* UIViewController+ViewForIdentifier.swift in Sources */,
 				3F9A870C2242DAB20083587F /* CanvasSettings.swift in Sources */,
 				3FB618062242BCE90074F438 /* CanvasSKScene.swift in Sources */,
-				3F616C64223E02FA00592034 /* MessageHandler.swift in Sources */,
 				3F9A87142243DAA50083587F /* Pixel.swift in Sources */,
 				3FB6180C2242BE380074F438 /* Font.swift in Sources */,
 				3FB618102242C0BC0074F438 /* UIImage+ScaleToSize.swift in Sources */,
@@ -504,7 +493,6 @@
 				3FB618032242BB710074F438 /* CanvasViewController.swift in Sources */,
 				3F9A872E224713830083587F /* PresentationDataSource.swift in Sources */,
 				3FB618082242BD280074F438 /* ShapeType.swift in Sources */,
-				5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */,
 				3F9A87242246B2960083587F /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

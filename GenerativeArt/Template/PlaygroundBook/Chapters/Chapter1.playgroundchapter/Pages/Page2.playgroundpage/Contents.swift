@@ -41,15 +41,15 @@ func drawSquareWith(_: Color, _: Position, size: Double) {
 }
 //#-end-hidden-code
 /*:
-The first thing I wanna show to you is the bases of image processing. Using the images data to generate something upon it, create an infinity of creative possibilities. Like the creation artistic filters, create a color ordinated version of the image, glitch art.
+The first thing I wanna show to you is the bases of image processing. Using the images data to generate something upon it, create an infinity of creative possibilities. Like the creation artistic filters, color analysis, glitch art.
  
- Here's an example of one artistic filter I created using code:
+ Here's an example of an image intervention I created using code:
  
  ![Photo of a man with long curly hair using rounded glasses in grayscale, followed by a photo of a red galaxy, both of them with arrow in the bottom pointin to a box written "My Filter" which also has a arrow coming from its bottom, pointing to a image that is the combination of both previously said photos in a double exposure technic](ImgFilterShowcase.png "Photo of a man with long curly hair using rounded glasses in grayscale, followed by a photo of a red galaxy, both of them with arrow in the bottom pointin to a box written 'My Filter' which also has a arrow coming from its bottom, pointing to a image that is the combination of both previously said photos in a double exposure technic")
  
  ### But how does it work?
  
- Well, normally you would iterate over a structure that contais every single pixel data from the image, and at each step do something with the pixel data, like analyzing it, changing it or using it to draw another image.
+ Well, normally you would iterate over a structure that contais every single pixel data from an image, and at each step do something with that data, like analyzing it, changing it or using it to draw another image.
  
  
  ### Hands on:
@@ -64,7 +64,7 @@ The first thing I wanna show to you is the bases of image processing. Using the 
     2. We are going to pass to the selected function: the pixel’s **color**, its **positions**, and a **size** value
  
  * callout(Tip):
- Start with a lower number for size, and then start to experiment with it on other executions. But keep in mind that the value should be greater than zero for something to be shown.
+ Start with a lower number for size, and then experiment with different values to see what happens. But remember to use values greater than zero for something to be shown.
  
 */
 
@@ -78,12 +78,12 @@ for pixel in pixels {
 /*:
  3. After that you should Tap the big white button written **Pick an image** to select what we are going to analyse.
  
- 4. Finally, tap the button **Run My Code**
+ 4. Finally, tap the **Run My Code** button
  
  
  If everything went alright, you should now have a stylized version of the photo you just choose. Neat, ain't it? 😄
  
- If you want so, tap the three dots button up in the NavBar a select Take Picture, so you can save you beatiful artwork. Maybe show off to your friends by posting on social media. 😜
+ If you want so, tap the three dots button up in the Nav Bar a select **Take Picture**, so you can save your artwork. Maybe show off to your friends on social media. 😜
 
  [Next: ASCII Art](@next)
  
