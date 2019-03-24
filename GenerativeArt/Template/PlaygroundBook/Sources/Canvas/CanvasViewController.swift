@@ -135,12 +135,14 @@ class CanvasViewController: UIViewController, PlaygroundLiveViewSafeAreaContaine
         
         switch self.cvSettings.mode {
         case .text:
-            let chars = Array(self.cvSettings.text.uppercased())
-            let letter = chars[textCount]
-            delegate?.displayText("\(letter)", with: color)
-            textCount+=1
-            if (textCount >= chars.count) {
-                textCount = 0
+            if (self.cvSettings.text.count > 0){
+                let chars = Array(self.cvSettings.text.uppercased())
+                let letter = chars[textCount]
+                delegate?.displayText("\(letter)", with: color)
+                textCount+=1
+                if (textCount >= chars.count) {
+                    textCount = 0
+                }
             }
         case .shape:
             delegate?.displayShapeOf(self.cvSettings.shape, with: color)
@@ -221,7 +223,7 @@ extension CanvasViewController: PlaygroundLiveViewMessageHandler {
         delegate?.setupWith(fontName: self.cvSettings.font.rawValue, fontSize: CGFloat(self.cvSettings.size))
           timer = Timer.scheduledTimer(timeInterval: 0.01, target: self,   selector: (#selector(CanvasViewController.updateTimer)), userInfo: nil, repeats: true)
             
-        }
+        } 
             
         
         
