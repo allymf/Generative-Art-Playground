@@ -40,7 +40,6 @@ func drawSquareWith(_: Color, _: Position, size: Double) {
     liveView.send(.data(data))
 }
 //#-end-hidden-code
-
 /*:
 The first thing I wanna show to you is the bases of image processing. Using the images data to generate something upon it, create an infinity of creative possibilities. Like the creation artistic filters, create a color ordinated version of the image, glitch art.
  

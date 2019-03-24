@@ -39,7 +39,6 @@ func displayNextCharacterIn(_: String, _: Color, _: Position, fontSize: Double) 
 
 let pixels: [Pixel] = [Pixel(at: 12, with: 11.0)]
 //#-end-hidden-code
-
 /*:
 During the period which typewriters were the standard, some people use to make drawings using the types. This kind of expression evolved when computers were introduced and along with them lots of different characters.
  

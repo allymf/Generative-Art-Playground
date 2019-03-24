@@ -7,7 +7,6 @@
 //
 //#-code-completion(everything, hide)
 //#-end-hidden-code
-
 /*:
  I hope that this experience gave you some insights on generative art . I hope I could transmit you a little bit of the magic I see in it.🧙🏼‍♂️
  

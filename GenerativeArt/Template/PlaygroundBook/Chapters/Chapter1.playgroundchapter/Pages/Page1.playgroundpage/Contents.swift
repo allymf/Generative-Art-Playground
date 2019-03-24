@@ -8,7 +8,6 @@
 //#-code-completion(everything, hide)
 
 //#-end-hidden-code
-
 /*:
  
  Hi, I'm **Alysson**. That's a picture of myself on the right. 👉🏼
