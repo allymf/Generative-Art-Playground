@@ -59,7 +59,7 @@ During the period which typewriters were the standard, some people use to make d
  */
 
 // Text Configuration
-text = /*#-editable-code Text to be shown*/""/*#-end-editable-code*/
+text = /*#-editable-code Text to be shown*/"WWDC"/*#-end-editable-code*/
 
 // Available fonts are chalck, futura, noteworthy
 fontType = /*#-editable-code*/chalck/*#-end-editable-code*/

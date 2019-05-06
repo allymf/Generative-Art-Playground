@@ -143,6 +143,8 @@ class CanvasViewController: UIViewController, PlaygroundLiveViewSafeAreaContaine
                 if (textCount >= chars.count) {
                     textCount = 0
                 }
+            } else {
+                delegate?.displayText(" ", with: color)
             }
         case .shape:
             delegate?.displayShapeOf(self.cvSettings.shape, with: color)
@@ -223,7 +225,7 @@ extension CanvasViewController: PlaygroundLiveViewMessageHandler {
         delegate?.setupWith(fontName: self.cvSettings.font.rawValue, fontSize: CGFloat(self.cvSettings.size))
           timer = Timer.scheduledTimer(timeInterval: 0.01, target: self,   selector: (#selector(CanvasViewController.updateTimer)), userInfo: nil, repeats: true)
             
-        } 
+        }
             
         
         
